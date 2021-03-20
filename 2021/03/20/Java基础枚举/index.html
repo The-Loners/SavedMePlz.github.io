@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring概述以及IOC理论推导, front-end,vue js,javascript">
+    <meta name="keywords" content="Java基础-枚举, front-end,vue js,javascript">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spring概述以及IOC理论推导 | 小杨明白了</title>
+    <title>Java基础-枚举 | 小杨明白了</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring概述以及IOC理论推导</h1>
+                    <h1 class="description center-align post-title">Java基础-枚举</h1>
                 </div>
             </div>
         </div>
@@ -369,8 +369,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                <span class="chip bg-color">框架</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -385,7 +385,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-12
+                    2021-03-20
                 </div>
                 
 
@@ -401,32 +401,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="/2021/03/12/Spring%E6%A6%82%E8%BF%B0%E4%BB%A5%E5%8F%8AIOC%E7%90%86%E8%AE%BA%E6%8E%A8%E5%AF%BC/Users\34005\AppData\Roaming\Typora\typora-user-images\image-20210312164542470.png" alt="image-20210312164542470"></p>
-<h2 id="一-什么是Spring"><a href="#一-什么是Spring" class="headerlink" title="一.什么是Spring"></a>一.什么是Spring</h2><p>Spring：春天—-&gt;给软件行业带来春天</p>
-<p>2002年，Rod Jahnson首次推出了Spring框架雏形 interface21 框架</p>
-<p>2004年3月24日，Spring框架以 interface21框架为基础，经过重新设计，发布了1.0正式版</p>
-<p>Spring理念：<strong>使现有的技术更加实用，本身就是一个大杂烩，整合现有框架技术</strong></p>
-<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ol>
-<li><p>Spring 是一个开源免费的框架，容器</p>
-</li>
-<li><p>Spring 是一个轻量级的框架，非入侵式的</p>
-</li>
-<li><p><strong>控制反转IOC，面向对象AOP</strong></p>
-</li>
-<li><p>对事物的支持，对框架的支持</p>
-</li>
-<li><p>……</p>
-<p>总结：<strong>Spring 是一个轻量级控制反转的（IOC）和面向切面（AOP）的容器（框架）</strong></p>
-</li>
+                <h2 id="枚举的说明"><a href="#枚举的说明" class="headerlink" title="枚举的说明"></a>枚举的说明</h2><ol>
+<li>类的对象是固定的确定的，就可以称为枚举类</li>
+<li>需要定义一组常量时，强烈建议使用枚举类</li>
+<li>如果枚举中只有一个对象，则可以作为单例模式的实现方式</li>
 </ol>
-<h4 id="IOC控制反转"><a href="#IOC控制反转" class="headerlink" title="IOC控制反转"></a>IOC控制反转</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestUserBean</span> </span>&#123;</span><br><span class="line">    User user = <span class="keyword">new</span> User();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(User user)</span></span>&#123;</span><br><span class="line">        user.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="如何实现自定义枚举类："><a href="#如何实现自定义枚举类：" class="headerlink" title="如何实现自定义枚举类："></a>如何实现自定义枚举类：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//自定义枚举类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Season</span></span>&#123;</span><br><span class="line"><span class="comment">//1.声明Season对象的属性:private final修饰</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line"><span class="comment">//2.私化类的构造器,并给对象属性赋值</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">Season</span><span class="params">(String seasonName,String seasonDesc)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">    <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3.提供当前枚举类的多个对象：public static final的</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SPRING = <span class="keyword">new</span> Season(<span class="string">&quot;春天&quot;</span>,<span class="string">&quot;春暖花开&quot;</span>);</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season SUMMER = <span class="keyword">new</span> Season(<span class="string">&quot;夏天&quot;</span>,<span class="string">&quot;夏日炎炎&quot;</span>);</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season AUTUMN = <span class="keyword">new</span> Season(<span class="string">&quot;秋天&quot;</span>,<span class="string">&quot;秋高气爽&quot;</span>);</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Season WINTER = <span class="keyword">new</span> Season(<span class="string">&quot;冬天&quot;</span>,<span class="string">&quot;冰天雪地&quot;</span>);</span><br><span class="line"><span class="comment">//4.其他诉求1：获取枚举类对象的属性</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getSeasonName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> seasonName;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getSeasonDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> seasonDesc;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//4.其他诉求1：提供toString()</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;Season&#123;&quot;</span> +</span><br><span class="line">            <span class="string">&quot;seasonName=&#x27;&quot;</span> + seasonName + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">            <span class="string">&quot;, seasonDesc=&#x27;&quot;</span> + seasonDesc + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">            <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>User 是在应用内部创建以及维护的。所谓控制反转就是应用本身不负责依赖对象的创建及维护，依赖对象的创建及维护是由外部容器负责的。这样控制权就由应用转移到了外部容器。<strong>控制权的转移就是所谓的控制反转</strong></p>
-<h4 id="依赖注入（Dependency-Injection）"><a href="#依赖注入（Dependency-Injection）" class="headerlink" title="依赖注入（Dependency Injection）"></a>依赖注入（Dependency Injection）</h4><p>把依赖对象交给外部容器负责创建，那么TestUserBean类可以改成如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestUserBean</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> User user;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//通过 构造器 参数，让容器把创建好的依赖对象注入进TestUserBean,也可以通过Setter方法注入</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TestUserBean</span><span class="params">(User user)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user = user;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(User user)</span></span>&#123;</span><br><span class="line">        user.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>所谓依赖注入就是：<strong>在运行期间，由外部容器动态地将依赖对象注入到组件中</strong></p>
-<h2 id><a href="#" class="headerlink" title></a></h2>
+
+
+
+
+
+<h3 id="JDK-5-0新增使用enum定义枚举类："><a href="#JDK-5-0新增使用enum定义枚举类：" class="headerlink" title="JDK 5.0新增使用enum定义枚举类："></a>JDK 5.0新增使用enum定义枚举类：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用enum关键字枚举类</span></span><br><span class="line">   <span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1.提供当前枚举类的对象，多个对象之间用&quot;,&quot;隔开，末尾对象&quot;;&quot;结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>,<span class="string">&quot;春暖花开&quot;</span>),</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>,<span class="string">&quot;夏日炎炎&quot;</span>),</span><br><span class="line"> AUTUMN(<span class="string">&quot;秋天&quot;</span>,<span class="string">&quot;秋高气爽&quot;</span>),</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>,<span class="string">&quot;冰天雪地&quot;</span>);</span><br><span class="line">    <span class="comment">//2.声明Season对象的属性:private final修饰</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">final</span> String seasonName;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String seasonDesc;</span><br><span class="line">    <span class="comment">//2.私化类的构造器,并给对象属性赋值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Season1</span><span class="params">(String seasonName,String seasonDesc)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.seasonName = seasonName;</span><br><span class="line">     <span class="keyword">this</span>.seasonDesc = seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//4.其他诉求1：获取枚举类对象的属性</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> seasonName;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSeasonDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> seasonDesc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="使用enum定义枚举类后，枚举类常用方法（基于java-lang-Enum类）："><a href="#使用enum定义枚举类后，枚举类常用方法（基于java-lang-Enum类）：" class="headerlink" title="使用enum定义枚举类后，枚举类常用方法（基于java.lang.Enum类）："></a>使用enum定义枚举类后，枚举类常用方法（基于java.lang.Enum类）：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Season1 summer = Season1.SUMMER;</span><br><span class="line">        <span class="comment">//toString():返回枚举类对象的名称</span></span><br><span class="line">        System.out.println(summer.toString());</span><br><span class="line"><span class="comment">//        System.out.println(Season1.class.getSuperclass());</span></span><br><span class="line">        System.out.println(<span class="string">&quot;****************&quot;</span>);</span><br><span class="line">        <span class="comment">//values():返回所的枚举类对象构成的数组</span></span><br><span class="line">        Season1[] values = Season1.values();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; values.length;i++)&#123;</span><br><span class="line">            System.out.println(values[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;****************&quot;</span>);</span><br><span class="line">        Thread.State[] values1 = Thread.State.values();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; values1.length; i++) &#123;</span><br><span class="line">            System.out.println(values1[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//valueOf(String objName):返回枚举类中对象名是objName的对象。</span></span><br><span class="line">        Season1 winter = Season1.valueOf(<span class="string">&quot;WINTER&quot;</span>);</span><br><span class="line">        <span class="comment">//如果没objName的枚举类对象，则抛异常：IllegalArgumentException</span></span><br><span class="line"><span class="comment">//        Season1 winter = Season1.valueOf(&quot;WINTER1&quot;);</span></span><br><span class="line">        System.out.println(winter);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="使用enum定义枚举类后，如何让枚举类对象分别实现接口"><a href="#使用enum定义枚举类后，如何让枚举类对象分别实现接口" class="headerlink" title="使用enum定义枚举类后，如何让枚举类对象分别实现接口"></a>使用enum定义枚举类后，如何让枚举类对象分别实现接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Info</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用enum关键字枚举类</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Season1</span> <span class="keyword">implements</span> <span class="title">Info</span></span>&#123;</span><br><span class="line">    <span class="comment">//1.提供当前枚举类的对象，多个对象之间用&quot;,&quot;隔开，末尾对象&quot;;&quot;结束</span></span><br><span class="line">    SPRING(<span class="string">&quot;春天&quot;</span>,<span class="string">&quot;春暖花开&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;春天在哪里？&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    SUMMER(<span class="string">&quot;夏天&quot;</span>,<span class="string">&quot;夏日炎炎&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;宁夏&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    AUTUMN(<span class="string">&quot;秋天&quot;</span>,<span class="string">&quot;秋高气爽&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;秋天不回来&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    WINTER(<span class="string">&quot;冬天&quot;</span>,<span class="string">&quot;冰天雪地&quot;</span>)&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;大约在冬季&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
             </div>
             <hr/>
 
@@ -451,7 +457,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/12/Spring%E6%A6%82%E8%BF%B0%E4%BB%A5%E5%8F%8AIOC%E7%90%86%E8%AE%BA%E6%8E%A8%E5%AF%BC/">http://example.com/2021/03/12/Spring%E6%A6%82%E8%BF%B0%E4%BB%A5%E5%8F%8AIOC%E7%90%86%E8%AE%BA%E6%8E%A8%E5%AF%BC/</a>
+                    <a href="http://example.com/2021/03/20/Java%E5%9F%BA%E7%A1%80%E6%9E%9A%E4%B8%BE/">http://example.com/2021/03/20/Java%E5%9F%BA%E7%A1%80%E6%9E%9A%E4%B8%BE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -489,8 +495,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                    <span class="chip bg-color">框架</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -921,9 +927,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/03/20/Java%E5%9F%BA%E7%A1%80%E6%9E%9A%E4%B8%BE/">
                     <div class="card-image">
@@ -941,9 +948,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -952,6 +959,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -970,13 +978,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/06/MyBatis%E5%8A%A8%E6%80%81SQL/">
+                <a href="/2021/03/12/Spring%E6%A6%82%E8%BF%B0%E4%BB%A5%E5%8F%8AIOC%E7%90%86%E8%AE%BA%E6%8E%A8%E5%AF%BC/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="MyBatis动态SQL">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Spring概述以及IOC理论推导">
                         
-                        <span class="card-title">MyBatis动态SQL</span>
+                        <span class="card-title">Spring概述以及IOC理论推导</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -987,7 +995,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-12
                             </span>
                         <span class="publish-author">
                             
