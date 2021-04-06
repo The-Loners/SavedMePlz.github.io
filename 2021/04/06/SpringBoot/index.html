@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MyBatis面试题, front-end,vue js,javascript">
+    <meta name="keywords" content="SpringBoot, front-end,vue js,javascript">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MyBatis面试题 | 小杨明白了</title>
+    <title>SpringBoot | 小杨明白了</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MyBatis面试题</h1>
+                    <h1 class="description center-align post-title">SpringBoot</h1>
                 </div>
             </div>
         </div>
@@ -385,7 +385,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-22
+                    2021-04-06
                 </div>
                 
 
@@ -401,63 +401,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="什么是Mybatis"><a href="#什么是Mybatis" class="headerlink" title="什么是Mybatis"></a>什么是Mybatis</h3><p>MyBatis是一个半ORM(对象映射关系)框架，它内部封装了JDBC，加载驱动，创建连接等一些里繁杂的过程，开发人员只需要关注如何编写SQL语句，可以严格控制SQL执行性能，灵活度高</p>
-<h3 id="MyBatis的优点"><a href="#MyBatis的优点" class="headerlink" title="MyBatis的优点"></a>MyBatis的优点</h3><ol>
-<li>基于SQL语句编程，相当灵活，不会对应用程序或者数据库的现有设计造成任何影响</li>
-<li>与JDBC相比，减少了50%以上的代码量，消除了JDBC大量的代码冗余，不需要手动开关连接</li>
-<li>很好的与各种数据库兼容，因为MyBatis使用JDBC来连接数据库。所以只要支持JDBC的数据库MyBatis都支持</li>
-<li>能够与Spring很好的集成</li>
-</ol>
-<h3 id="MyBatis的缺点"><a href="#MyBatis的缺点" class="headerlink" title="MyBatis的缺点"></a>MyBatis的缺点</h3><ol>
-<li>由于MyBatis是基于SQL语句编程，当SQL语句的编写工作量较大，尤其是字段多，关联表多时，对于开发人员编写 SQL 语句的功底有一定要求</li>
-<li>SQL语句依赖于数据库，导致数据库一致性差，不能随意更换数据库</li>
-</ol>
-<h3 id="MyBatis框架适用场合"><a href="#MyBatis框架适用场合" class="headerlink" title="MyBatis框架适用场合"></a>MyBatis框架适用场合</h3><p>由于MyBatis专注于SQL本身，灵活度高，所以比较适合对性能要求较高，或者需求变化较多的项目，如互联网项目。</p>
-<h3 id="MyBatis与Hibernate有哪些不同"><a href="#MyBatis与Hibernate有哪些不同" class="headerlink" title="MyBatis与Hibernate有哪些不同"></a>MyBatis与Hibernate有哪些不同</h3><ol>
-<li>MyBatis不是一个完全的ORM框架，因为MyBatis需要开发人员自己编写SQL语句</li>
-<li>Hibemate对象/关系映射能力强，数据库无关性好，对于关系模型要求高的软件，如果用Hibernate开发可以节省很多diamagnetic，提高效率</li>
-</ol>
-<h3 id="和-的区别是什么"><a href="#和-的区别是什么" class="headerlink" title="#{}和${}的区别是什么"></a>#{}和${}的区别是什么</h3><ol>
-<li>#{}是预编译处理，${}是字符串替换</li>
-<li>MyBatis在处理#{}时，会将SQL中的#{}替换为？,调用PreparedStatement的set方法来赋值</li>
-<li>MyBatis在处理${}替换成变量的值</li>
-<li>使用#{}可以有效防止SQL注入，提高系统安全性。<strong>一般能用#{}就别用${}</strong></li>
-</ol>
-<h3 id="当实体类中的属性名和表中的字段名不一样-，怎么办"><a href="#当实体类中的属性名和表中的字段名不一样-，怎么办" class="headerlink" title="当实体类中的属性名和表中的字段名不一样 ，怎么办"></a>当实体类中的属性名和表中的字段名不一样 ，怎么办</h3><ol>
-<li><p>通过在查询的SQL语句中定义字段名的别名，让字段名和实体类的属性名一致</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=”selectorder” parametertype=”<span class="keyword">int</span>” resultetype=”me.gacl.domain.order”&gt;</span><br><span class="line">	select order_id id, order_no orderno ,order_price price form orders where order_id=#&#123;id&#125;;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过<resultMap>来映射字段名和实体类属性名的一一对应关系</resultMap></p>
-</li>
-</ol>
-<h3 id="模糊查询like语句该怎么写"><a href="#模糊查询like语句该怎么写" class="headerlink" title="模糊查询like语句该怎么写"></a>模糊查询like语句该怎么写</h3><ol>
-<li><p>在Java代码中添加SQL通配符</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string wildcardname = “%smi%”;</span><br><span class="line">   list&lt;name&gt; names = mapper.selectlike(wildcardname);</span><br><span class="line">   &lt;select id=”selectlike”&gt;</span><br><span class="line">       select * from foo where bar like #&#123;value&#125;</span><br><span class="line">   &lt;/select&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在SQL语句中拼接通配符，但是会引起SQL注入</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string wildcardname = “smi”;</span><br><span class="line">    list&lt;name&gt; names = mapper.selectlike(wildcardname);</span><br><span class="line">    &lt;select id=”selectlike”&gt;</span><br><span class="line">         select * from foo where bar like <span class="string">&quot;%&quot;</span>$&#123;value&#125;<span class="string">&quot;%&quot;</span></span><br><span class="line">    &lt;/select&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<h3 id="通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗"><a href="#通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗" class="headerlink" title="通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗"></a>通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗</h3><p>Dao接口就是mapper接扣，接口的全限名，就是映射文件中的namespace的值，接口的方法名就是映射文件中MappedStatement的id值，接口方法内的参数就是传递给SQL的参数</p>
-<p>Dao接口的工作原理时JDK动态代理，MyBatis运行时会使用JDK动态代理为Dao接口生成代理proxy对象，代理对象proxy会拦截接口方法，转而执行接口方法所对应的MapperStatement所代表的SQL，然后将SQL执行结果返回</p>
-<p>接口里的方法是不能重载的，因为时全限名+方法名的报错和寻找策略</p>
-<h3 id="MyBatis是如何进行分页的，分页插件的原理是什么"><a href="#MyBatis是如何进行分页的，分页插件的原理是什么" class="headerlink" title="MyBatis是如何进行分页的，分页插件的原理是什么?"></a>MyBatis是如何进行分页的，分页插件的原理是什么?</h3><p>MyBatis使用RowBounds对象进行分页，它是针对ResultSet结果执行的内存分页，而非物理分页，可以在SQL内直接书写带有物理分页的参数来完成物理分页功能，也可以使用分页插件来完成物理分页。</p>
-<p>分页插件的基本原理是使用MyBatis提供插件接口，实现自定义插件，在插件的拦截方法内拦截待执行的SQL,然后重写SQL，根据dialect方言，添加对应的物理分页语句和物理分页参数</p>
-<h3 id="MyBatis是否支持延迟加载？如果支持，它的实现原理是什么？"><a href="#MyBatis是否支持延迟加载？如果支持，它的实现原理是什么？" class="headerlink" title="MyBatis是否支持延迟加载？如果支持，它的实现原理是什么？"></a>MyBatis是否支持延迟加载？如果支持，它的实现原理是什么？</h3><p>MyBatis仅支持一对一关联对象和一对多查询关联集合对象的延迟加载，在MyBatis配置文件中，可以配置是否启用延迟加载(lazyLoadingEnabled=true|false)</p>
-<p>延迟加载的基本原理就是，似乎用CGLIB创建目标对象的代理对象，当调用目标方法时，进入拦截器方法，比如调用a.getB().getName()，拦截器 invoke()方法发现a.getB()是null值，那么就会单独发送事先保存好的查询关联B对象的SQL，把B查询出来，然后调用a.setB(b)，于是a的对象b属性就有值了，接着完成a.getB().getName()方法的调用</p>
-<h3 id="MyBatis提供了9种动态SQL标签"><a href="#MyBatis提供了9种动态SQL标签" class="headerlink" title="MyBatis提供了9种动态SQL标签"></a>MyBatis提供了9种动态SQL标签</h3><p><strong>trim|where|set|foreach|if|choose|when|otherwise|bind</strong></p>
-<h3 id="MyBatis的xml映射文件中，不同的xml映射文件，id是否可以重复？"><a href="#MyBatis的xml映射文件中，不同的xml映射文件，id是否可以重复？" class="headerlink" title="MyBatis的xml映射文件中，不同的xml映射文件，id是否可以重复？"></a>MyBatis的xml映射文件中，不同的xml映射文件，id是否可以重复？</h3><p>不同的xml映射文件，如果配置了namespace，那么id可以重复，如果没有配置，那么不能重复。</p>
-<p>原因就是namespace+id作为Map&lt;String,MappedStatement&gt; 的key使用的，如果没有namespace，就剩下id，那么，id重复会导致数据相互覆盖，有了namespace,自然id就可以重复，namespace不同，namespace+id自然也就不同</p>
-<h3 id="Mybatis的一级，二级缓存"><a href="#Mybatis的一级，二级缓存" class="headerlink" title="Mybatis的一级，二级缓存"></a>Mybatis的一级，二级缓存</h3><ol>
-<li>一级缓存：基于PerpetualCache的HashMap本地缓存，其存储作用域为Session,当Session flush或close之后，该Session中的所有Cache就将清空，默认打开一级皇城</li>
-<li>二级缓存与一级缓存其机制相同，默认也是采用PerpetualCache，HashMap存储，不同在于其作用域为mapper(Namespace)，并且可自定义存储源，如Ehcache。默认不打开二级缓存，要开启二级缓存，使用二级缓存属性类需要实现Serializable序列化接口（可用来保存对象的状态）可在它的映射文件中配置<cache></cache></li>
-<li>对于缓存数据更新机制，当某一个作用域（一级缓存Session/二级缓存Namespaces）进行了C/U/D操作后，默认该作用域下所有select中的缓存将被clear</li>
-</ol>
-<h3 id="Mybatis实现一对一有几种方式？具体是怎么操作的？"><a href="#Mybatis实现一对一有几种方式？具体是怎么操作的？" class="headerlink" title="Mybatis实现一对一有几种方式？具体是怎么操作的？"></a>Mybatis实现一对一有几种方式？具体是怎么操作的？</h3><p>有联合查询和嵌套查询，联合查询是几个表联合查询，只查询一次，通过在resultMap里面配置association节点一对一的类就可以完成；嵌套查询是先查一个表，根据这个表里的结果的外键id，再去另外一个表里查询数据，也是通过associtation配置，但另外一个表的查询通过select属性配置</p>
-<h3 id="MyBatis实现一对多有几种方式，具体是怎么操作的？"><a href="#MyBatis实现一对多有几种方式，具体是怎么操作的？" class="headerlink" title="MyBatis实现一对多有几种方式，具体是怎么操作的？"></a>MyBatis实现一对多有几种方式，具体是怎么操作的？</h3><p>有联合查询和嵌套查询，联合查询时几个表联合查询，只查询一次，通过再resultMap里面colllection节点配置一对多的类就可以完成；嵌套查询是先查一个表，根据这个表里面的结果的外键id，再去另外一个表里查询数据，也是通过配置collection，但另外一个表的查询通过select节点配置</p>
+                <h3 id="jfadsfasdffdsfasdfa"><a href="#jfadsfasdffdsfasdfa" class="headerlink" title="jfadsfasdffdsfasdfa"></a>jfadsfasdffdsfasdfa</h3><h3 id="fsdfsdfsdfdfdsfsdfasdfsdffsdf"><a href="#fsdfsdfsdfdfdsfsdfasdfsdffsdf" class="headerlink" title="fsdfsdfsdfdfdsfsdfasdfsdffsdf"></a>fsdfsdfsdfdfdsfsdfasdfsdffsdf</h3><p>fasdfasdf</p>
 
             </div>
             <hr/>
@@ -483,7 +427,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/22/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/">http://example.com/2021/03/22/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
+                    <a href="http://example.com/2021/04/06/SpringBoot/">http://example.com/2021/04/06/SpringBoot/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -953,9 +897,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/06/SpringBoot/">
                     <div class="card-image">
@@ -973,9 +918,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -984,6 +929,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1002,13 +948,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/20/Java%E5%9F%BA%E7%A1%80%E6%9E%9A%E4%B8%BE/">
+                <a href="/2021/03/22/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Java基础-枚举">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="MyBatis面试题">
                         
-                        <span class="card-title">Java基础-枚举</span>
+                        <span class="card-title">MyBatis面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1019,7 +965,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-22
                             </span>
                         <span class="publish-author">
                             
@@ -1032,8 +978,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E6%A1%86%E6%9E%B6/">
+                        <span class="chip bg-color">框架</span>
                     </a>
                     
                 </div>
