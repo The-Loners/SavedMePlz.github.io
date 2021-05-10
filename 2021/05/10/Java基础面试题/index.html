@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringBoot, front-end,vue js,javascript">
+    <meta name="keywords" content="Java基础面试题, front-end,vue js,javascript">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SpringBoot | 小杨明白了</title>
+    <title>Java基础面试题 | 小杨明白了</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SpringBoot</h1>
+                    <h1 class="description center-align post-title">Java基础面试题</h1>
                 </div>
             </div>
         </div>
@@ -369,8 +369,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                <span class="chip bg-color">框架</span>
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
                             </a>
                         
                     </div>
@@ -385,7 +385,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-06
+                    2021-05-10
                 </div>
                 
 
@@ -401,7 +401,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="jfadsfasdffdsfasdfa"><a href="#jfadsfasdffdsfasdfa" class="headerlink" title="jfadsfasdffdsfasdfa"></a>jfadsfasdffdsfasdfa</h3><h3 id="fsdfsdfsdfdfdsfsdfasdfsdffsdf"><a href="#fsdfsdfsdfdfdsfsdfasdfsdffsdf" class="headerlink" title="fsdfsdfsdfdfdsfsdfasdfsdffsdf"></a>fsdfsdfsdfdfdsfsdfasdfsdffsdf</h3><p>fasdfasdf</p>
+                <h3 id="线程的生命周期"><a href="#线程的生命周期" class="headerlink" title="线程的生命周期"></a>线程的生命周期</h3><p>线程的生命周期分为5个阶段：新建，就绪，运行，阻塞，销毁</p>
+<ol>
+<li>新建：就是刚使用new方法，new出来的线程;</li>
+<li>就绪：就是调用的线程的start()方法后，这个时候线程就处于等待CPU分配资源阶段，谁先抢到CPU资源，谁就开始执行</li>
+<li>运行：当就绪的线程被调度并获得CPU资源时，就进入运行状态，run方法定义了线程的操作和功能</li>
+<li>阻塞：在运行状态的时候，可能因为某些原因导致运行状态的线程变成了阻塞状态，比如：sleep()，wait()之后线程就处于阻塞状态，这个时候需要其他机制将处于阻塞状态的线程唤醒，比如调用notify()或者notifyAll()方法。唤醒的线程不会立即执行run方法，它们要再次等待CPU分配资源进入运行状态</li>
+<li>销毁：如果线程正常执行完毕后或线程被提前强制性的终止或出现异常导致结束，那么线程就要被销毁，释放资源</li>
+</ol>
+<h3 id="使线程阻塞的方法有哪些"><a href="#使线程阻塞的方法有哪些" class="headerlink" title="使线程阻塞的方法有哪些"></a>使线程阻塞的方法有哪些</h3><p>sleep()    suspend()   yield   wait()   join()</p>
+<p>suspend e()使线程进入阻塞状态，只有对应的resume e()被调用的时候，线程才会进入可执行状态。(不建议用，容易发生死锁)</p>
+<p>yield()的效果等价于调度程序认为该线程已执行了足够的时间从而转到另一个线程。(暂停当前正在执行的线程，并执行其他线程，且让出的时间不可知)</p>
+<p>join()也叫线程加入。是当前线程A调用另一个线程B的join()方法，当前线程转A入阻塞状态，直到线程B运行结束，线程A才由阻塞状态转为可执行状态。</p>
+<h3 id="Java中有哪些线程池"><a href="#Java中有哪些线程池" class="headerlink" title="Java中有哪些线程池"></a>Java中有哪些线程池</h3><ol>
+<li>newCachedThreadPool创建一个可缓存线程池程</li>
+<li>newFixedThreadPool 创建一个定长线程池</li>
+<li>newScheduledThreadPool 创建一个周期性执行任务的线程池</li>
+<li>newSingleThreadExecutor 创建一个单线程化的线程池</li>
+</ol>
+<p>newCachedThreadPool：一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程</p>
+<p>newFixedThreadPool ：创建一个指定工作线程数量的线程池，每当提交一个任务就创建一个工作线程，当线程 处于空闲状态时，它们并不会被回收，除非线程池被关闭了，如果工作线程数量达到线程池初始的最大数，则将提交的任务存入到池队列（没有大小限制）中。</p>
+<p>newScheduledThreadPool：它的核心线程数量是固定的，而非核心线程数是没有限制的，并且当非核心线程闲置时会被立即回收，它可安排给定延迟后运行命令或者定期地执行。这类线程池主要用于执行定时任务和具有固定周期的重复任务</p>
+<p>newSingleThreadExecutor ：这类线程池内部只有一个核心线程，以无界队列方式来执行该线程，这使得这些任务之间不需要处理线程同步的问题，它确保所有的任务都在同一个线程中按顺序中执行，并且可以在任意给定的时间不会有多个线程是活动的</p>
+<h3 id="Java基本数据类型"><a href="#Java基本数据类型" class="headerlink" title="Java基本数据类型"></a>Java基本数据类型</h3><p>数值型：整数类型：byte   short   int   long</p>
+<p>数值型：浮点类型：float   double</p>
+<p>字符型：char</p>
+<p>布尔类型：booleann</p>
+<h3 id="Java包装类"><a href="#Java包装类" class="headerlink" title="Java包装类"></a>Java包装类</h3><p>Integer   Long   Short   Byte   Character   Double   Float   Boolean   BigInterger   BigDecmail</p>
+<h3 id="Java中Object类都有哪些方法"><a href="#Java中Object类都有哪些方法" class="headerlink" title="Java中Object类都有哪些方法"></a>Java中Object类都有哪些方法</h3><p>registernatives()   getClass()   hashCode()   equals()   clone()   toString()   notify()   notifyAll()   wait()   wait(long)   wait(long,int)   finalize()   共12个方法</p>
+<h3 id="Java集合ArrayList和LinkedList区别"><a href="#Java集合ArrayList和LinkedList区别" class="headerlink" title="Java集合ArrayList和LinkedList区别"></a>Java集合ArrayList和LinkedList区别</h3><p>ArrayList：内存地址连续，所以查询效率大于增删</p>
+<p>LinkedList：内存地址不联系，插入时只需要将节点掰开即可，所以增删效率大于查询</p>
+<h3 id="Java中JDK1-7和1-8的区别"><a href="#Java中JDK1-7和1-8的区别" class="headerlink" title="Java中JDK1.7和1.8的区别"></a>Java中JDK1.7和1.8的区别</h3><p>JDK1.8新增3大重要特性：</p>
+<ol>
+<li>HashMap结构由：散列表（数组+链表）转换为红黑树</li>
+<li>增加了Lambda表达式</li>
+<li>接口中可以写方法体</li>
+</ol>
 
             </div>
             <hr/>
@@ -427,7 +462,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/06/SpringBoot/">http://example.com/2021/04/06/SpringBoot/</a>
+                    <a href="http://example.com/2021/05/10/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/">http://example.com/2021/05/10/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -465,8 +500,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                    <span class="chip bg-color">框架</span>
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
                                 </a>
                             
                         </div>
@@ -901,13 +936,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/10/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                <a href="/2021/05/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9D%A2%E8%AF%95%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Java基础面试题">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="数据库面试题">
                         
-                        <span class="card-title">Java基础面试题</span>
+                        <span class="card-title">数据库面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -946,13 +981,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/22/MyBatis%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                <a href="/2021/04/06/SpringBoot/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="MyBatis面试题">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SpringBoot">
                         
-                        <span class="card-title">MyBatis面试题</span>
+                        <span class="card-title">SpringBoot</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -963,7 +998,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-06
                             </span>
                         <span class="publish-author">
                             
@@ -976,8 +1011,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">面试</span>
+                    <a href="/tags/%E6%A1%86%E6%9E%B6/">
+                        <span class="chip bg-color">框架</span>
                     </a>
                     
                 </div>

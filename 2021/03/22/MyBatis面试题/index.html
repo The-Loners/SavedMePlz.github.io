@@ -369,8 +369,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                <span class="chip bg-color">框架</span>
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
                             </a>
                         
                     </div>
@@ -402,7 +402,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="什么是Mybatis"><a href="#什么是Mybatis" class="headerlink" title="什么是Mybatis"></a>什么是Mybatis</h3><p>MyBatis是一个半ORM(对象映射关系)框架，它内部封装了JDBC，加载驱动，创建连接等一些里繁杂的过程，开发人员只需要关注如何编写SQL语句，可以严格控制SQL执行性能，灵活度高</p>
-<h3 id="MyBatis的优点"><a href="#MyBatis的优点" class="headerlink" title="MyBatis的优点"></a>MyBatis的优点</h3><ol>
+<h3 id="MyBatis工作流程简述"><a href="#MyBatis工作流程简述" class="headerlink" title="MyBatis工作流程简述"></a>MyBatis工作流程简述</h3><p>创建SqlSessionFactoryBuilder对象，调用build(inputstream)方法读取并解析配置文件，返回SqlSessionFactory对象<br>由SqlSessionFactory创建SqlSession 对象，没有手动设置的话事务默认开启<br>调用SqlSession中的api，传入Statement Id和参数，内部进行复杂的处理，最后调用jdbc执行SQL语句，封装结果返回。</p>
+<ol>
 <li>基于SQL语句编程，相当灵活，不会对应用程序或者数据库的现有设计造成任何影响</li>
 <li>与JDBC相比，减少了50%以上的代码量，消除了JDBC大量的代码冗余，不需要手动开关连接</li>
 <li>很好的与各种数据库兼容，因为MyBatis使用JDBC来连接数据库。所以只要支持JDBC的数据库MyBatis都支持</li>
@@ -521,8 +522,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                    <span class="chip bg-color">框架</span>
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
                                 </a>
                             
                         </div>
