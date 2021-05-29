@@ -18,4 +18,3 @@ $(this).siblings(".code_lang").text(lang_name);
 
   });
 });
-
