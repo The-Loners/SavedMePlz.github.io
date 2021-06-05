@@ -431,21 +431,16 @@
 <li>在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在 ThreadLocal 中（推荐的一种方式）。</li>
 </ol>
 <h2 id="Spring-中的-bean-的生命周期"><a href="#Spring-中的-bean-的生命周期" class="headerlink" title="Spring 中的 bean 的生命周期"></a>Spring 中的 bean 的生命周期</h2><ul>
-<li>Bean 容器找到配置文件中 Spring Bean 的定义。</li>
-<li>Bean 容器利用 Java Reflection API 创建一个Bean的实例。</li>
-<li>如果涉及到一些属性值 利用 set()方法设置一些属性值。</li>
-<li>如果 Bean 实现了 BeanNameAware 接口，调用 setBeanName()方法，传入Bean的名字。</li>
-<li>如果 Bean 实现了 BeanClassLoaderAware 接口，调用 setBeanClassLoader()方法，传入 ClassLoader对象的实例。</li>
-<li>如果Bean实现了 BeanFactoryAware 接口，调用 setBeanClassLoader()方法，传入 ClassLoade r对象的实例。</li>
-<li>与上面的类似，如果实现了其他 *.Aware接口，就调用相应的方法。</li>
-<li>如果有和加载这个 Bean 的 Spring 容器相关的 BeanPostProcessor 对象，执行postProcessBeforeInitialization() 方法</li>
-<li>如果Bean实现了InitializingBean接口，执行afterPropertiesSet()方法。</li>
-<li>如果 Bean 在配置文件中的定义包含 init-method 属性，执行指定的方法。</li>
-<li>如果有和加载这个 Bean的 Spring 容器相关的 BeanPostProcessor 对象，执行postProcessAfterInitialization() 方法</li>
-<li>当要销毁 Bean 的时候，如果 Bean 实现了 DisposableBean 接口，执行 destroy() 方法。</li>
-<li>当要销毁 Bean 的时候，如果 Bean 在配置文件中的定义包含 destroy-method 属性，执行指定的方法。</li>
+<li>通过构造方法实例化 Bean 对象。</li>
+<li>通过 setter 方法设置对象的属性。</li>
+<li>通过Aware，也就是他的子类BeanNameAware，调用Bean的setBeanName()方法传递Bean的ID(XML里面注册的ID)，setBeanName方法是在bean初始化时调用的，通过这个方法可以得到BeanFactory和 Bean 在 XML 里面注册的ID。</li>
+<li>如果说 Bean 实现了 BeanFactoryAware,那么工厂调用setBeanFactory(BeanFactory var1) 传入的参数也是自身</li>
+<li>把 Bean 实例传递给 BeanPostProcessor 中的 postProcessBeforeInitialization 前置方法。</li>
+<li>完成 Bean 的初始化</li>
+<li>把 Bean 实例传递给 BeanPostProcessor 中的 postProcessAfterInitialization 后置方法。</li>
+<li>此时 Bean 已经能够正常时候，在最后的时候调用 DisposableBean 中的 destroy 方法进行销毁处理。</li>
 </ul>
-<p><img src="/2021/06/04/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/1.png"></p>
+<p><img src="/2021/06/04/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/1.jpg"></p>
 <h2 id="Spring-MVC-理解"><a href="#Spring-MVC-理解" class="headerlink" title="Spring MVC 理解"></a>Spring MVC 理解</h2><p>Spring MVC属于SpringFrameWork的后续产品，已经融合在Spring Web Flow里面。</p>
 <p> Spring的MVC框架主要由DispatcherServlet、处理器映射、处理器(控制器)、视图解析器、视图组成。</p>
 <p>Spring MVC 分离了控制器、模型对象、分派器以及处理程序对象的角色，这种分离让它们更容易进行定制。</p>
