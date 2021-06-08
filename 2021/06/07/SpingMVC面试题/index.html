@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring面试题, front-end,vue js,javascript">
+    <meta name="keywords" content="SpingMVC面试题, front-end,vue js,javascript">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spring面试题 | 小杨明白了</title>
+    <title>SpingMVC面试题 | 小杨明白了</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring面试题</h1>
+                    <h1 class="description center-align post-title">SpingMVC面试题</h1>
                 </div>
             </div>
         </div>
@@ -385,7 +385,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-04
+                    2021-06-07
                 </div>
                 
 
@@ -401,85 +401,52 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="什么是Spring框架"><a href="#什么是Spring框架" class="headerlink" title="什么是Spring框架"></a>什么是Spring框架</h2><p>spring是一个容器 ， 是spring是03年兴起的一个轻量级的java开放框架， 它是为了解决管理对象的复杂性而创建的， spring的两大核心和 IOC （控制反转）和 AOP （面向切面编程） 是可以在JavaSE和JavaEE中使用的轻量级开源框架。</p>
-<h2 id="列举一些重要的Spring模块"><a href="#列举一些重要的Spring模块" class="headerlink" title="列举一些重要的Spring模块"></a>列举一些重要的Spring模块</h2><ul>
-<li>Spring Core： 基础,可以说 Spring 其他所有的功能都需要依赖于该类库。主要提供 IOC 依赖注入功能。</li>
-<li>**Spring Aspects ** ： 该模块为与AspectJ的集成提供支持。</li>
-<li>Spring AOP ：提供了面向方面的编程实现。</li>
-<li>Spring JDBC : Java数据库连接。</li>
-<li>Spring JMS ：Java消息服务。</li>
-<li>Spring ORM : 用于支持Hibernate等ORM工具。</li>
-<li>Spring Web : 为创建Web应用程序提供支持。</li>
-<li>Spring Test : 提供了对 JUnit 和 TestNG 测试的支持。</li>
+                <h1 id="SpingMVC常见面试题"><a href="#SpingMVC常见面试题" class="headerlink" title="SpingMVC常见面试题"></a>SpingMVC常见面试题</h1><h2 id="SpingMVC工作原理是什么"><a href="#SpingMVC工作原理是什么" class="headerlink" title="SpingMVC工作原理是什么"></a>SpingMVC工作原理是什么</h2><ul>
+<li>客户端发送请求到 DispatcherServlet</li>
+<li>DispatcherServlet 查询 handlerMapping 找到处理请求的 Controller</li>
+<li>Controller 调用业务逻辑后，返回 ModelAndView</li>
+<li>DispatcherServlet 查询 ModelAndView，找到指定视图</li>
+<li>视图将结果返回到客户端</li>
 </ul>
-<h2 id="谈谈自己对于-Spring-IOC-和-AOP-的理解"><a href="#谈谈自己对于-Spring-IOC-和-AOP-的理解" class="headerlink" title="谈谈自己对于 Spring IOC 和 AOP 的理解"></a>谈谈自己对于 Spring IOC 和 AOP 的理解</h2><h3 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h3><p>IOC（Inverse of Control:控制反转）是一种设计思想，就是 将原本在程序中手动创建对象的控制权，交由Spring框架来管理。 IoC 在其他语言中也有应用，并非 Spirng 特有。 IoC 容器是 Spring 用来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。</p>
-<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>AOP（Aspect-Oriented Programming:面向切面编程）能够将那些与业务无关，<strong>却为业务模块所共同调用的逻辑或责任（例如事务处理、日志管理、权限控制等）封装起来</strong>，便于<strong>减少系统的重复代码</strong>，<strong>降低模块间的耦合度</strong>，并<strong>有利于未来的可拓展性和可维护性</strong>。</p>
-<h2 id="Spring-AOP-和-AspectJ-AOP-有什么区别"><a href="#Spring-AOP-和-AspectJ-AOP-有什么区别" class="headerlink" title="Spring AOP 和 AspectJ AOP 有什么区别"></a>Spring AOP 和 AspectJ AOP 有什么区别</h2><p>Spring AOP 属于运行时增强，而 AspectJ 是编译时增强。 Spring AOP 基于代理(Proxying)，而 AspectJ 基于字节码操作(Bytecode Manipulation)。</p>
-<p>Spring AOP 已经集成了 AspectJ ，AspectJ 应该算的上是 Java 生态系统中最完整的 AOP 框架了。AspectJ 相比于 Spring AOP 功能更加强大，但是 Spring AOP 相对来说更简单，</p>
-<p>如果我们的切面比较少，那么两者性能差异不大。但是，当切面太多的话，最好选择 AspectJ ，它比Spring AOP 快很多。</p>
-<h2 id="Spring-中的-bean-的作用域有哪些"><a href="#Spring-中的-bean-的作用域有哪些" class="headerlink" title="Spring 中的 bean 的作用域有哪些"></a>Spring 中的 bean 的作用域有哪些</h2><ul>
-<li>singleton : 唯一 bean 实例，Spring 中的 bean 默认都是单例的。</li>
-<li>prototype : 每次请求都会创建一个新的 bean 实例。（原型）</li>
-<li>request : 每一次HTTP请求都会产生一个新的bean，该bean仅在当前HTTP request内有效。</li>
-<li>session : 每一次HTTP请求都会产生一个新的 bean，该bean仅在当前 HTTP session 内有效。</li>
-<li>global-session： 全局session作用域，仅仅在基于portlet的web应用中才有意义，Spring5已经没有了。Portlet是能够生成语义代码(例如：HTML)片段的小型Java Web插件。它们基于portlet容器，可以像servlet一样处理HTTP请求。但是，与 servlet 不同，每个 portlet 都有不同的会话</li>
+<h2 id="SpingMVC怎样设定重定向和转发的"><a href="#SpingMVC怎样设定重定向和转发的" class="headerlink" title="SpingMVC怎样设定重定向和转发的"></a>SpingMVC怎样设定重定向和转发的</h2><ul>
+<li>在返回值前面加”forward:“就可以让结果转发,譬如”forward:user.do?name=method4”</li>
+<li>在返回值前面加”redirect:“就可以让返回值重定向,譬如”redirect:<a target="_blank" rel="noopener" href="http://www.baidu.com/">http://www.baidu.com</a>”</li>
 </ul>
-<h2 id="Spring-中的单例-bean-的线程安全问题"><a href="#Spring-中的单例-bean-的线程安全问题" class="headerlink" title="Spring 中的单例 bean 的线程安全问题"></a>Spring 中的单例 bean 的线程安全问题</h2><p>大部分时候我们并没有在系统中使用多线程，所以很少有人会关注这个问题。单例 bean 存在线程问题，主要是因为当多个线程操作同一个对象的时候，对这个对象的非静态成员变量的写操作会存在线程安全问题。</p>
-<p>常见的有两种解决办法：</p>
-<ol>
-<li>在Bean对象中尽量避免定义可变的成员变量（不太现实）。</li>
-<li>在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在 ThreadLocal 中（推荐的一种方式）。</li>
-</ol>
-<h2 id="Spring-中的-bean-的生命周期"><a href="#Spring-中的-bean-的生命周期" class="headerlink" title="Spring 中的 bean 的生命周期"></a>Spring 中的 bean 的生命周期</h2><ul>
-<li>通过构造方法实例化 Bean 对象。</li>
-<li>通过 setter 方法设置对象的属性。</li>
-<li>通过Aware，也就是他的子类BeanNameAware，调用Bean的setBeanName()方法传递Bean的ID(XML里面注册的ID)，setBeanName方法是在bean初始化时调用的，通过这个方法可以得到BeanFactory和 Bean 在 XML 里面注册的ID。</li>
-<li>如果说 Bean 实现了 BeanFactoryAware,那么工厂调用setBeanFactory(BeanFactory var1) 传入的参数也是自身</li>
-<li>把 Bean 实例传递给 BeanPostProcessor 中的 postProcessBeforeInitialization 前置方法。</li>
-<li>完成 Bean 的初始化</li>
-<li>把 Bean 实例传递给 BeanPostProcessor 中的 postProcessAfterInitialization 后置方法。</li>
-<li>此时 Bean 已经能够正常时候，在最后的时候调用 DisposableBean 中的 destroy 方法进行销毁处理。</li>
-</ul>
-<p><img src="/2021/06/04/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/1.jpg"></p>
-<h2 id="Spring-MVC-理解"><a href="#Spring-MVC-理解" class="headerlink" title="Spring MVC 理解"></a>Spring MVC 理解</h2><p>Spring MVC属于SpringFrameWork的后续产品，已经融合在Spring Web Flow里面。</p>
-<p> Spring的MVC框架主要由DispatcherServlet、处理器映射、处理器(控制器)、视图解析器、视图组成。</p>
-<p>Spring MVC 分离了控制器、模型对象、分派器以及处理程序对象的角色，这种分离让它们更容易进行定制。</p>
-<h2 id="Spring-框架中用到了哪些设计模式"><a href="#Spring-框架中用到了哪些设计模式" class="headerlink" title="Spring 框架中用到了哪些设计模式"></a>Spring 框架中用到了哪些设计模式</h2><ul>
-<li><strong>工厂设计模式</strong> : Spring使用工厂模式通过 BeanFactory、ApplicationContext 创建 bean 对象。</li>
-<li><strong>代理设计模式</strong> : Spring AOP 功能的实现。</li>
-<li><strong>单例设计模式</strong> : Spring 中的 Bean 默认都是单例的。</li>
-<li><strong>模板方法模式</strong> : Spring 中 jdbcTemplate、hibernateTemplate 等以 Template 结尾的对数据库操作的类，它们就使用到了模板模式。</li>
-<li><strong>包装器设计模式</strong> : 我们的项目需要连接多个数据库，而且不同的客户在每次访问中根据需要会去访问不同的数据库。这种模式让我们可以根据客户的需求能够动态切换不同的数据源。</li>
-<li><strong>观察者模式</strong>: Spring 事件驱动模型就是观察者模式很经典的一个应用。</li>
-<li><strong>适配器模式</strong> :Spring AOP 的增强或通知(Advice)使用到了适配器模式、spring MVC 中也是用到了适配器模式适配Controller。</li>
-</ul>
-<h2 id="Component-和-Bean-的区别"><a href="#Component-和-Bean-的区别" class="headerlink" title="@Component 和 @Bean 的区别"></a>@Component 和 @Bean 的区别</h2><ol>
-<li>作用对象不同: @Component 注解作用于类，而@Bean注解作用于方法。</li>
-<li>@Component通常是通过类路径扫描来自动侦测以及自动装配到Spring容器中（我们可以使用 @ComponentScan 注解定义要扫描的路径从中找出标识了需要装配的类自动装配到 Spring 的 bean 容器中）。@Bean 注解通常是我们在标有该注解的方法中定义产生这个 bean,@Bean告诉了Spring这是某个类的示例，当我需要用它的时候还给我。</li>
-<li>@Bean 注解比 Component 注解的自定义性更强，而且很多地方我们只能通过 @Bean 注解来注册bean。比如当我们引用第三方库中的类需要装配到 Spring容器时，则只能通过 @Bean来实现。</li>
-</ol>
-<h2 id="将一个类声明为Spring的-bean-的注解有哪些"><a href="#将一个类声明为Spring的-bean-的注解有哪些" class="headerlink" title="将一个类声明为Spring的 bean 的注解有哪些"></a>将一个类声明为Spring的 bean 的注解有哪些</h2><p>我们一般使用 @Autowired 注解自动装配 bean，要想把类标识成可用于 @Autowired 注解自动装配的 bean 的类,采用以下注解可实现：</p>
+<h2 id="SpingMVC怎么和Ajax相互调用的"><a href="#SpingMVC怎么和Ajax相互调用的" class="headerlink" title="SpingMVC怎么和Ajax相互调用的"></a>SpingMVC怎么和Ajax相互调用的</h2><p>通过Jackson框架就可以把Java里面的对象直接转化成Js可以识别的Json对象。具体步骤如下 ：</p>
 <ul>
-<li>@Component ：通用的注解，可标注任意类为 Spring 组件。</li>
-<li>@Repository : 对应持久层即 Dao 层，主要用于数据库相关操作。</li>
-<li>@Service : 对应服务层，主要涉及一些复杂的逻辑，需要用到 Dao层。</li>
-<li>@Controller : 对应 Spring MVC 控制层，主要用户接受用户请求并调用 Service 层返回数据给前端页面。</li>
+<li>加入Jackson.jar</li>
+<li>在配置文件中配置json的映射</li>
+<li>在接受Ajax方法里面可以直接返回Object,List等,但方法前面要加上@ResponseBody注解。</li>
 </ul>
-<h2 id="Spring-管理事务的方式有几种"><a href="#Spring-管理事务的方式有几种" class="headerlink" title="Spring 管理事务的方式有几种"></a>Spring 管理事务的方式有几种</h2><ol>
-<li>编程式事务，在代码中硬编码。(不推荐使用)</li>
-<li>声明式事务，在配置文件中配置（推荐使用）</li>
-</ol>
-<p><strong>声明式事务又分为两种：</strong></p>
-<ol>
-<li>基于XML的声明式事务</li>
-<li>基于注解的声明式事务</li>
-</ol>
-<h2 id="Spring-事务中的隔离级别有哪几种"><a href="#Spring-事务中的隔离级别有哪几种" class="headerlink" title="Spring 事务中的隔离级别有哪几种"></a>Spring 事务中的隔离级别有哪几种</h2><p><strong>1) DEFAULT （默认）</strong><br>默认的隔离级别，使用数据库默认的事务隔离级别。另外四个与JDBC的隔离级别相对应。</p>
-<p><strong>2) READ_UNCOMMITTED （读未提交）</strong><br>这是事务最低的隔离级别，它允许另外一个事务可以看到这个事务未提交的数据。这种隔离级别会产生脏读，不可重复读和幻读。</p>
-<p><strong>3) READ_COMMITTED （读已提交）</strong><br>保证一个事务修改的数据提交后才能被另外一个事务读取，另外一个事务不能读取该事务未提交的数据。这种事务隔离级别可以避免脏读出现，但是可能会出现不可重复读和幻读。</p>
-<p><strong>4) REPEATABLE_READ （可重复读）</strong><br>这种事务隔离级别可以防止脏读、不可重复读，但是可能出现幻读。它除了保证一个事务不能读取另一个事务未提交的数据外，还保证了不可重复读。</p>
-<p><strong>5) SERIALIZABLE（串行化）</strong><br>这是花费最高代价但是最可靠的事务隔离级别，事务处理为顺序执行。有效防止脏读、不可重复读和幻读。</p>
-<h2 id="Spring-事务中有哪几种事务传播行为"><a href="#Spring-事务中有哪几种事务传播行为" class="headerlink" title="Spring 事务中有哪几种事务传播行为"></a>Spring 事务中有哪几种事务传播行为</h2><p>PROPAGATION_REQUIRED（required）    支持当前事务，假设当前没有事务。就新建一个事务<br>PROPAGATION_SUPPORTS（supports）    支持当前事务，假设当前没有事务，就以非事务方式运行<br>PROPAGATION_MANDATORY（mandatory）    支持当前事务，假设当前没有事务，就抛出异常<br>PROPAGATION_REQUIRES_NEW（requires_new）    新建事务，假设当前存在事务。把当前事务挂起<br>PROPAGATION_NOT_SUPPORTED（supported）    以非事务方式运行操作。假设当前存在事务，就把当前事务挂起<br>PROPAGATION_NEVER（never）    以非事务方式运行，假设当前存在事务，则抛出异常<br>PROPAGATION_NESTED（nested）    如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则新建一个事务</p>
+<h2 id="SpingMVC如何做异常处理"><a href="#SpingMVC如何做异常处理" class="headerlink" title="SpingMVC如何做异常处理"></a>SpingMVC如何做异常处理</h2><p>可以将异常抛给Spring框架，由Spring框架来处理；自定义实现spring的全局异常解析器HandlerExceptionResolver，在异常处理器中添视图页面即可。</p>
+<h2 id="Springmvc-的控制器是不是单例模式-如果是-有什么问题-怎么解决？"><a href="#Springmvc-的控制器是不是单例模式-如果是-有什么问题-怎么解决？" class="headerlink" title="Springmvc 的控制器是不是单例模式,如果是,有什么问题,怎么解决？"></a>Springmvc 的控制器是不是单例模式,如果是,有什么问题,怎么解决？</h2><ul>
+<li>是单例模式,所以在多线程访问的时候有线程安全问题,不要用同步,会影响性能的,解决方案是在控制器里面不能写字段。</li>
+</ul>
+<h2 id="Springmvc-中-如果拦截get方式提交的方法-怎么配置？"><a href="#Springmvc-中-如果拦截get方式提交的方法-怎么配置？" class="headerlink" title="Springmvc 中 如果拦截get方式提交的方法,怎么配置？"></a>Springmvc 中 如果拦截get方式提交的方法,怎么配置？</h2><ul>
+<li>可以在@RequestMapping注解里面加上method=RequestMethod.GET</li>
+</ul>
+<h2 id="Springmvc-怎么样把ModelMap里面的数据放入Session里面？"><a href="#Springmvc-怎么样把ModelMap里面的数据放入Session里面？" class="headerlink" title="Springmvc 怎么样把ModelMap里面的数据放入Session里面？"></a>Springmvc 怎么样把ModelMap里面的数据放入Session里面？</h2><ul>
+<li>可以在类上面加上@SessionAttributes注解,里面包含的字符串就是要放入session里面的key。</li>
+</ul>
+<h2 id="Springmvc-中系统如何分层-？"><a href="#Springmvc-中系统如何分层-？" class="headerlink" title="Springmvc 中系统如何分层 ？"></a>Springmvc 中系统如何分层 ？</h2><p>系统分为表现层（UI）：数据的展现，操作页面，请求转发。 </p>
+<p>业务层（服务层）：封装业务处理逻辑 </p>
+<p>持久层（数据访问层）：封装数据访问逻辑</p>
+<p><strong>各层之间的关系</strong>： 表示层通过接口调用业务层，业务层通过接口调用持久层，这样，当下一层发生变化改变，不影响上一层的数据。 MVC是一种表现层的架构</p>
+<h2 id="Springmvc-用什么对象从后台向前台传递数据的？"><a href="#Springmvc-用什么对象从后台向前台传递数据的？" class="headerlink" title="Springmvc 用什么对象从后台向前台传递数据的？"></a>Springmvc 用什么对象从后台向前台传递数据的？</h2><p>通过ModelMap对象,可以在这个对象里面用put方法,把对象加到里面,前台就可以通过el表达式拿到。</p>
+<h2 id="springmvc-中当一个方法向AJAX返回特殊对象-譬如Object-List等-需要做什么处理？"><a href="#springmvc-中当一个方法向AJAX返回特殊对象-譬如Object-List等-需要做什么处理？" class="headerlink" title="springmvc 中当一个方法向AJAX返回特殊对象,譬如Object,List等,需要做什么处理？"></a>springmvc 中当一个方法向AJAX返回特殊对象,譬如Object,List等,需要做什么处理？</h2><p>加上@ResponseBody注解。</p>
+<h2 id="Springmvc-中拦截器如何使用"><a href="#Springmvc-中拦截器如何使用" class="headerlink" title="Springmvc 中拦截器如何使用"></a>Springmvc 中拦截器如何使用</h2><ul>
+<li><strong>定义拦截器，实现HandlerInterceptor接口</strong>。接口中提供三个方法。<ul>
+<li>preHandle ：进入 Handler方法之前执行，用于身份认证、身份授权，比如身份认证，如果认证通过表示当前用户没有登陆，需要此方法拦截不再向下执行</li>
+<li>postHandle：进入Handler方法之后，返回modelAndView之前执行，应用场景从modelAndView出发：将公用的模型数据(比如菜单导航)在这里传到视图，也可以在这里统一指定视图</li>
+<li>afterCompletion：执行Handler完成执行此方法，应用场景：统一异常处理，统一日志处理</li>
+</ul>
+</li>
+<li><strong>拦截器配置</strong>：<ul>
+<li>针对HandlerMapping配置(不推荐)：springmvc拦截器针对HandlerMapping进行拦截设置，如果在某个HandlerMapping中配置拦截，经过该 HandlerMapping映射成功的handler最终使用该 拦截器。(一般不推荐使用)</li>
+<li>类似全局的拦截器：springmvc配置类似全局的拦截器，springmvc框架将配置的类似全局的拦截器注入到每个HandlerMapping中</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -505,7 +472,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/06/04/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/">http://example.com/2021/06/04/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
+                    <a href="http://example.com/2021/06/07/SpingMVC%E9%9D%A2%E8%AF%95%E9%A2%98/">http://example.com/2021/06/07/SpingMVC%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -979,13 +946,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/07/SpingMVC%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                <a href="/2021/06/07/SpingBoot%E9%9D%A2%E8%AF%95%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="SpingMVC面试题">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="SpingBoot面试题">
                         
-                        <span class="card-title">SpingMVC面试题</span>
+                        <span class="card-title">SpingBoot面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1024,13 +991,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/29/Redis/">
+                <a href="/2021/06/04/Spring%E9%9D%A2%E8%AF%95%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Redis">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Spring面试题">
                         
-                        <span class="card-title">Redis</span>
+                        <span class="card-title">Spring面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1041,7 +1008,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
                             </span>
                         <span class="publish-author">
                             
@@ -1054,8 +1021,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                 </div>
